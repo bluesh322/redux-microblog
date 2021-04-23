@@ -1,7 +1,6 @@
 import { combineReducers } from "redux";
 import posts  from "./posts";
-import titles from "./titles"
 
-const rootReducer = combineReducers({ posts, titles });
+const rootReducer = combineReducers({ posts });
 
 export default rootReducer;

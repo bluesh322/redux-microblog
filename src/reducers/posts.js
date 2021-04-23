@@ -1,16 +1,12 @@
-const INITIAL_STATE = {
-    posts: {}
-}
-
-export default function posts(state = INITIAL_STATE, action) {
-    switch (action.type) {
-      case "ADD_POST": {
-        return {
-          ...state,
-        };
-      }
-      default:
-        return state;
+export default function posts(state = {}, action) {
+  switch (action.type) {
+    case "ADD_POST": {
+      return {
+        ...state,
+        [action.post.id]:  action.post,
+      };
     }
+    default:
+      return state;
   }
-  
+}
