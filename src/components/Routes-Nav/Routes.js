@@ -1,8 +1,8 @@
 import React from "react";
 import { Switch, Redirect, Route } from "react-router-dom";
-import NewPostForm from "./NewPostForm";
-import { useSelector, useDispatch } from "react-redux";
-import PostList from "./PostList"
+import NewPostForm from "../../components/Posts/NewPostForm";
+import PostList from "../../components/Posts/PostList"
+import Post from "../../components/Posts/Post";
 
 const Routes = () => {
 
@@ -13,6 +13,9 @@ const Routes = () => {
       </Route>
       <Route exact path="/new">
         <NewPostForm ></NewPostForm>
+      </Route>
+      <Route exact path="/:postId">
+        <Post></Post>
       </Route>
       <Route>
       </Route>

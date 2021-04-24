@@ -3,16 +3,11 @@ import { Link } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
-  IconButton,
-  List,
-  ListItem,
-  ListItemText,
   makeStyles,
   Container,
   Typography,
 } from "@material-ui/core";
-import { lightGreen } from "@material-ui/core/colors";
-import { useSelector } from "react-redux";
+
 
 const useStyles = makeStyles({
   navDisplayFlex: {
@@ -25,7 +20,6 @@ const useStyles = makeStyles({
   },
 });
 
-const postId = 1;
 
 const Navbar = () => {
     const classes = useStyles();
@@ -35,7 +29,7 @@ const Navbar = () => {
             <Container>
                 <Typography variant="h1">Microblog</Typography>
                 <Typography variant="h4">Get in the Rithm of bloggin!</Typography>
-                <Typography></Typography><Link className={classes.linkText} to={`/${postId}`}><Typography variant="h4">Blog</Typography></Link>
+                <Typography></Typography><Link className={classes.linkText} to="/"><Typography variant="h4">Blog</Typography></Link>
                 <Link to="/new"><Typography className={classes.linkText} variant="h4">Add a new post</Typography></Link>
             </Container>
         )

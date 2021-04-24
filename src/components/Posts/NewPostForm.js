@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { v4 } from "uuid";
-import { TextField, Paper, Button } from "@material-ui/core";
-import { addPost } from "../reducers/actions";
-import { ADD_POST } from "../reducers/actionTypes";
+import { TextField, Button } from "@material-ui/core";
+import { sendPostToAPI } from "../../reducers/actions";
 import { useDispatch } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -36,7 +35,7 @@ const NewPostForm = () => {
   const dispatch = useDispatch();
 
   const add = (newPost) => {
-    dispatch(addPost(newPost));
+    dispatch(sendPostToAPI(newPost));
   };
 
   const cancel = () => {
